@@ -96,10 +96,10 @@ backdrop.addEventListener("click", () => {
 });
 
 //Toggle Buttom
-toggleButton.addEventListener("click", () => {
+toggleButton.onclick = () => {
   openModal(mobileNav);
   openModal(backdrop);
-});
+};
 
 navAbout.addEventListener("click", () => {
   closeModal(mobileNav);

@@ -60,7 +60,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
-  z-index: 60;
+  z-index: 105;
   font-weight: 500;
   letter-spacing: 5px;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
@@ -118,9 +118,9 @@ body {
   display: none;
   position: fixed;
   z-index: 101;
-  top: 0;
+  top: 50px;
   left: 0;
-  background: rgb(238, 237, 237);
+  background: rgb(255, 252, 252);
   width: 100%;
   height: 35vh;
 }
@@ -457,7 +457,7 @@ Reviews Form
   letter-spacing: 2px;
   cursor: pointer;
   width: 7rem;
-} */ 
+} */
 
 /* General Buttons */
 .button {
