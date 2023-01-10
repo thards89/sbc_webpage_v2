@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sao Bernardo do Campo City</title>
+  </head>
+  <div id="container">
+    <body>
+      <!-- Images Modal -->
+      <div class="backdrop"></div>
+      <div id="modal-image-one" class="modal">
+        <img
+          src="http://imprensaabc.com.br/wp-content/uploads/2015/11/Estoril-2.jpg"
+          alt="Estoril Park"
+        />
+        <p class="modal-text">Estoril Park</p>
+      </div>
+      <div id="modal-image-two" class="modal">
+        <img
+          src="https://catracalivre.com.br/wp-content/uploads/2020/01/caminhos-do-mar-2-1-1.jpg"
+          alt="Eco-tourism Center Caminhos do Mar"
+        />
+        <p class="modal-text">Eco-tourism Center Caminhos do Mar</p>
+      </div>
+      <div id="modal-image-three" class="modal">
+        <img
+          src="https://www.baressp.com.br/bares/fotos/barcentral_tratada.jpg"
+          alt="Kennedy Avenue"
+        />
+        <p class="modal-text">Kennedy Avenue</p>
+      </div>
+      <div id="modal-image-four" class="modal">
+        <img
+          src="https://i.ytimg.com/vi/cylLav4XXh0/maxresdefault.jpg"
+          alt="Rua Marechal Deodoro"
+        />
+        <p class="modal-text">Rua Marechal Deodoro</p>
+      </div>
+      <!-- Experience Modal Form-->
+      <!-- <div class="estoril-form">
+        <h2>Share your Experience about Estoril Park</h2>
+        <form action="index.html" class="signup-form">
+          <label for="name">Name</label>
+          <input type="text" id="first-name" />
+          <label for="title">Title</label>
+          <input type="text" id="title" />
+          <label for="experience">Experience</label>
+          <input type="text" id="experience" />
+          <button type="submit" class="button">Submit</button>
+        </form> -->
+      </div>
+      <!-- Reviews Modal
+    <div class="estoril-reviews">
+        <h2>Reviews about Estoril Park</h2>
+        <div id="estorilReviews"></div>
+    </div> -->
+
+      <!-- Header -->
+      <header>
+        <nav class="main-nav__container">
+          <div>
+            <button class="toggle-button">
+              <span class="toggle-button__bar"></span>
+              <span class="toggle-button__bar"></span>
+              <span class="toggle-button__bar"></span>
+            </button>
+          </div>
+          <div class="main-nav__title">Sao Bernardo do Campo</div>
+          <ul class="main-nav__items">
+            <li class="main-nav__item">
+              <a href="#about">About</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#places">Places to Visit</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#directions">Directions</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="../portuguese-version/index.html"><span title="Versão em Português-BR"><img id="br-flag" src="./images/pt-br.png"></span></a>
+              </li>
+          </ul>
+        </nav>
+      </header>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+          <li id="mobile-nav__about" class="mobile-nav__item">
+            <a href="#about">About</a>
+          </li>
+          <li id="mobile-nav__places" class="mobile-nav__item">
+            <a href="#places">Places to Visit</a>
+          </li>
+          <li id="mobile-nav__directions" class="mobile-nav__item">
+            <a href="#directions">Directions</a>
+          </li>
+          <li id="mobile-nav__directions" class="mobile-nav__item">
+            <a href="./portuguese-version/index.html">Versão em Português-BR</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <section class="main__image">
+          <h1>Sao Bernardo do Campo City</h1>
+        </section>
+        <!-- About Section -->
+        <section id="about">
+          <article class="about-session">
+            <div class="about-session__texts">
+              <h1 class="about-session__title">About the City</h1>
+              <h5 class="about-session__subtitle">
+                The first Brazilian settlement built away from the sea
+              </h5>
+              <p class="about-session__text">
+                São Bernardo do Campo is a Brazilian municipality in the state
+                of São Paulo. It is part of the Metropolitan Region of São
+                Paulo. The population is 844,483 (2020 est.) in an area of
+                409.51 km2 (158.11 sq mi).
+              </p>
+              <p class="about-session__text">
+                The city was founded by João Ramalho in 1553 and was known as
+                Vila de Santo André da Borda do Campo de Piratininga, soon
+                transferred to another nearby place, safer from hostile tribes.
+                It is, however, historically perceived as the first Brazilian
+                settlement built away from the sea.
+              </p>
+              <p class="about-session__text">
+                The original settlement was then resettled as São Bernardo,
+                became a parish in 1812 and became a municipality in 1890. In
+                1938, it became a part of the Santo André district only to be
+                separated again in 1945, as the aftermath of an action from a
+                group of entrepreneurs led by Wallace Cochrane Simonsen, who was
+                eventually appointed as the first mayor of the newborn
+                municipality.
+              </p>
+            </div>
+            <div class="about-session__image">
+              <img
+                id="about-session__image--one"
+                src="https://climaonline.com.br/public/fotos/sp/sao-bernardo-do-campo/foto-antiga-de-sao-bernardo-do-campo-75.webp"
+                alt="Old Pic"
+              />
+              <img
+                id="about-session__image--two"
+                src="https://www.saobernardo.sp.gov.br/documents/10181/34439/cidade_antiga.jpg/1c94e8d1-09e9-467e-ba13-4d68c1b30bca?t=1406136336015"
+              />
+            </div>
+          </article>
+        </section>
+        <!--- Places to Visit --->
+        <section id="places" class="places-to-visit">
+          <div class="places-to-visit__title">Places to Visit</div>
+        </section>
+        <!-- Card 1 -->
+        <section class="places-details">
+          <article class="places-details__card">
+            <img
+              id="image-one"
+              class="places-details__image"
+              src="http://imprensaabc.com.br/wp-content/uploads/2015/11/Estoril-2.jpg"
+              alt="Estoril Park"
+            />
+            <h1 class="places-details__title">Estoril Park</h1>
+            <p class="places-details__content">
+              With a cable car, a beautiful dam view, pedal boats, some hikings
+              paths inside nature and a municipal zoo with more then 450 species
+              of animals, it is a must-see park.
+            </p>
+            <div class="experience-buttons">
+              <!-- <button class="experiences-button__review">Reviews</button>
+                <button id="buttonEstoril" class="experiences-button__post">Post an Experience</button> -->
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="places-details__card">
+            <img
+              id="image-two"
+              class="places-details__image"
+              src="https://catracalivre.com.br/wp-content/uploads/2020/01/caminhos-do-mar-2-1-1.jpg"
+              alt="Eco-tourism Center Caminhos do Mar"
+            />
+            <h1 class="places-details__title">
+              Eco-tourism Center Caminhos do Mar
+            </h1>
+            <p class="places-details__content">
+              Called by many as “Estrada Velha de Santos”, this road is
+              considered the oldest connection between the cities of São Paulo
+              with others on the São Paulo coast. The road was inaugurated in
+              1844 and it was used until 1985, when it was closed. In this
+              eco-tourism center, you can make hikings through the old road and
+              among the beautiful nature of Mata Atlantica.
+            </p>
+            <div class="experience-buttons">
+              <!-- <button class="experiences-button__review">Reviews</button>
+            <button id="buttonEcoTurismo" class="experiences-button__post">Post an Experience</button> -->
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article class="places-details__card">
+            <img
+              id="image-three"
+              class="places-details__image"
+              src="https://www.baressp.com.br/bares/fotos/barcentral_tratada.jpg"
+              alt="Kennedy Avenue"
+            />
+            <h1 class="places-details__title">Kennedy Avenue</h1>
+            <p class="places-details__content">
+              An avenue full of bars and restaurants to try the best of Sao
+              Bernado do Campo food. There you can have the typical city`s dish
+              called "Frango com Polenta" (Chicken with Polenta).
+            </p>
+            <div class="experience-buttons">
+              <!-- <button class="experiences-button__review">Reviews</button>
+            <button id="buttonKennedy" class="experiences-button__post">Post an Experience</button> -->
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article class="places-details__card">
+            <img
+              id="image-four"
+              class="places-details__image"
+              src="https://i.ytimg.com/vi/cylLav4XXh0/maxresdefault.jpg"
+              alt="Rua Marechal Deodoro"
+            />
+            <h1 class="places-details__title">Marechal Deodoro</h1>
+            <p class="places-details__content">
+              Would you like to go shopping? This is the most popular and
+              traditional shopping street of the city.
+            </p>
+            <div class="experience-buttons">
+              <!-- <button class="experiences-button__review">Reviews</button>
+                  <button id="buttonMarechal" class="experiences-button__post">Post an Experience</button> -->
+            </div>
+          </article>
+        </section>
+        <!-- Directions Section -->
+        <section id="directions">
+          <article class="directions">
+            <h1 class="directions__title">Directions</h1>
+            <p class="directions__text">
+              From Sao Paulo city, you just need to get Anchieta Railway in
+              Ipiranga neighbourhood and get ou on Km 18.
+            </p>
+            <div>
+              <iframe
+                class="directions__map"
+                src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d141119.91847175584!2d-46.690948221108606!3d-23.633540149238616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%2C%20State%20of%20S%C3%A3o%20Paulo%2C%20Brazil!3m2!1d-23.555771399999998!2d-46.6395571!4m5!1s0x94ce3fc6927dd0c3%3A0xcdcd0d550f9656cf!2sS%C3%A3o%20Bernardo%20do%20Campo%2C%20State%20of%20S%C3%A3o%20Paulo%2C%20Brazil!3m2!1d-23.7018047!2d-46.5536333!5e0!3m2!1sen!2snl!4v1638253901587!5m2!1sen!2snl"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <div>
+          Code developed by
+          <a href="https://github.com/thards89" target="_blank"
+            >Thais Ribeiro Full Stack Developer</a
+          >
+        </div>
+      </footer>
+      <script src="script.js"></script>
+    </body>
+  </div>
+</html>

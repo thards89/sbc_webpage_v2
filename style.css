@@ -1,0 +1,728 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.backdrop {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal img {
+  margin: auto;
+  display: block;
+  width: 90%;
+}
+
+.modal-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Navbar */
+.main-nav__container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  z-index: 60;
+  font-weight: 500;
+  letter-spacing: 5px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+.main-nav__items {
+  display: none;
+}
+
+.main-nav__item {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  color: black;
+}
+
+.main-nav__item:hover,
+.main-nav__item:active {
+  text-decoration: underline;
+  background-color: rgb(204, 204, 204);
+  padding: 0.5rem 1rem;
+}
+
+/* Mobile NavBar */
+.toggle-button {
+  width: 3rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 1.5px;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: rgb(238, 237, 237);
+  width: 100%;
+  height: 35vh;
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: #212529;
+}
+
+.mobile-nav__item a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  padding: 0.2rem 0;
+}
+
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
+  background-color: rgb(204, 204, 204);
+  color: #212529;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+#br-flag {
+  width: 25px;
+  height: 18px;
+}
+
+#uk-flag {
+  width: 26px;
+  height: 18px;
+}
+
+/* About section */
+
+.main__image {
+  text-align: center;
+  position: relative;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/25/Sao-Bernardo-do-Campo-2018.jpg");
+  background-size: cover;
+  background-position: left 10% bottom 50%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  width: 100vw;
+  height: 50vh;
+  opacity: 0.75;
+}
+
+.main__image img {
+  margin-top: 4rem;
+  opacity: 0.75;
+}
+
+.main__image:hover,
+.main__image:active {
+  opacity: 1;
+}
+
+.main__image h1 {
+  position: absolute;
+  bottom: 5%;
+  left: 0px;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-shadow: 10px 20px 20 #444;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.about-session {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-session__texts {
+  width: 40rem;
+  text-align: center;
+  padding: 1.5rem;
+  color: #212529;
+}
+
+.about-session__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.about-session__subtitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+  line-height: 1.2;
+}
+
+.about-session__text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.about-session__image {
+  width: 35rem;
+  opacity: 0.75;
+  padding: 2rem;
+}
+
+#about-session__image--one,
+#about-session__image--two {
+  width: 95%;
+}
+
+/* Places to Visit */
+
+.places-to-visit {
+  text-align: center;
+}
+
+.places-to-visit__title {
+  font-size: 2.2rem;
+  padding: 3rem;
+  letter-spacing: 5px;
+}
+
+.places-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 2px;
+}
+
+.places-details__card {
+  border-radius: 5px;
+  width: 20rem;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid rgb(228, 228, 228);
+  border-left: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.places-details__image {
+  width: 320px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.places-details__image:hover,
+.places-details__image:active {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.places-details__title {
+  font-size: 1.5rem;
+  letter-spacing: 7px;
+  font-weight: 400;
+  color: #212529;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.places-details__content {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #212529;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Reviews Forms */
+/* .estoril-form {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  margin-left: 300px;
+  background-color: white;
+  width: 60%;
+  height: 90%;
+  border: 1px solid #d8e7db;
+  box-shadow: 1px 3px 2px rgb(110, 109, 109);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.estoril-form h2 {
+  text-align: center;
+}
+
+.estoril-reviews {
+  display: block;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  margin-left: 300px;
+  background-color: white;
+  width: 60%;
+  height: 90%;
+  border: 1px solid #d8e7db;
+  box-shadow: 1px 3px 2px rgb(110, 109, 109);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.estoril-reviews h2 {
+  text-align: center;
+}
+
+Reviews Form
+.signup-form {
+  padding: 1rem;
+}
+
+.signup-form label {
+  font-weight: 500;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form select {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.signup-form input[type="checkbox"],
+.signup-form label {
+  display: inline-block;
+  width: auto;
+  vertical-align: bottom;
+}
+
+.signup-form input:not([type="checkbox"]),
+.signup-form select {
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.5rem;
+  font: inherit;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  outline: none;
+  background-color: #d8e7db;
+  border-color: #cad3cc;
+}
+
+.signup-form input[type="checkbox"] {
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 1rem;
+  height: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.signup-form input[type="checkbox"]:checked {
+  background-color: #2ddf5c;
+  border: #0e4f1f;
+}
+
+.signup-form #email:invalid {
+  border-color: #ff5454 !important;
+  background-color: #faacac;
+}
+
+.signup-form button[type="submit"] {
+  display: block;
+  margin-top: 1rem;
+} */
+
+/* #experience {
+  height: 250px;
+}
+/* Reviews Forms Buttons*/
+/* .experience-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experiences-button__review {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 0.7rem;
+  border: 1.5px solid #b6bdc9;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: 7rem;
+}
+
+.experiences-button__post {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 0.7rem;
+  border: 1.5px solid #b6bdc9;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: 7rem;
+} */ 
+
+/* General Buttons */
+.button {
+  background-color: #b6bdc9;
+  color: rgb(0, 0, 0);
+  font-size: 0.9rem;
+  border: 1.5px solid #b6bdc9;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: 10rem;
+}
+
+.button:hover,
+.button:active {
+  background-color: white;
+  color: #000000;
+  /* border: 1.5px solid white; */
+}
+
+/* Directions */
+.directions {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+  color: #212529;
+}
+
+.directions__title {
+  font-size: 2.1rem;
+  padding: 1rem;
+  letter-spacing: 5px;
+  margin: auto;
+  font-weight: 400;
+}
+
+.directions__text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.directions__map {
+  width: 95%;
+  border: 0;
+  margin: auto;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #212529;
+  background-color: white;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%), 0 2px 10px 0 rgb(0 0 0 / 25%);
+}
+
+.footer a {
+  color: #212529;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover,
+.footer a:active {
+  text-decoration: underline;
+  font-weight: 500;
+  background-color: rgb(204, 204, 204);
+}
+
+@media (min-width: 37rem) {
+  /* .modal {
+    position: fixed;
+    display: none;
+    z-index: 200;
+    top: 20%;
+    left: 10%;
+  }
+  
+  .modal-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+   */
+  .main-nav__container {
+    padding: 0;
+  }
+
+  .main-nav__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-nav__title {
+    display: none;
+  }
+
+  .toggle-button {
+    /* display: none; */
+    visibility: hidden;
+  }
+
+  .main__image {
+    height: 70vh;
+  }
+
+  .about-session__title {
+    font-size: 2.2rem;
+  }
+
+  .about-session__image {
+    margin: 5rem 5rem 1rem 1rem;
+  }
+
+  #about-session__image--one,
+  #about-session__image--two {
+    width: 600px;
+    height: 380px;
+  }
+
+  .directions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    color: #212529;
+  }
+
+  .directions__title {
+    font-size: 2.3rem;
+    padding: 1rem;
+    letter-spacing: 5px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .directions__text {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .directions__map {
+    width: 400px;
+    height: 300px;
+    border: 0;
+  }
+}
+
+@media (min-width: 54rem) {
+  .modal img {
+    max-width: 700px;
+  }
+
+  .main-nav__container {
+    padding: 0;
+  }
+
+  .main-nav__title {
+    display: none;
+  }
+
+  .toggle-button {
+    /* display: none; */
+    visibility: hidden;
+  }
+
+  .main__image {
+    height: 80vh;
+  }
+
+  .main__image h1 {
+    font-size: 2rem;
+  }
+
+  .about-session__title {
+    font-size: 2.2rem;
+  }
+
+  .about-session__image {
+    margin: 5rem 5rem 1rem 1rem;
+  }
+
+  #about-session__image--one {
+    width: 600px;
+    height: 380px;
+  }
+
+  #about-session__image--two {
+    width: 600px;
+    height: 350px;
+  }
+
+  .places-to-visit__title {
+    font-size: 2.1rem;
+    padding: 3rem;
+    letter-spacing: 5px;
+  }
+  .places-details__card {
+    width: 15.5rem;
+  }
+
+  .places-details__image {
+    width: 246px;
+    height: 155px;
+    border-radius: 5px;
+  }
+
+  .places-details__title {
+    font-size: 1.3rem;
+    letter-spacing: 7px;
+    font-weight: 400;
+    color: #212529;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+
+  .places-details__content {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
+    color: #212529;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 58.6rem) {
+  /* .modal {
+    left: 9%;
+  } */
+
+  /* .modal img {
+    width: 800px;
+  } */
+
+  .main-nav__title {
+    display: block;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+}

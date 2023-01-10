@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "elephant"
+  },
+  "AccessToken": {
+    "dataSource": "elephant",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "elephant",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "elephant",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "elephant",
+    "public": false
+  },
+  "blog": {
+    "dataSource": "elephant",
+    "public": true
+  }
+}

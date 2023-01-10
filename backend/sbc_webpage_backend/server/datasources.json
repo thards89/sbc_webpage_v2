@@ -1,0 +1,9 @@
+{
+  "elephant": {
+    "name": "elephant",
+    "connector": "postgresql",
+    "url": "postgres://rmzfigfx:m5Vhj97y8oGIoPXPElC0moV3qW1jmwEN@snuffleupagus.db.elephantsql.com/rmzfigfx",
+    "username": "rmzfigfx",
+    "password": "m5Vhj97y8oGIoPXPElC0moV3qW1jmwEN"
+  }
+}
